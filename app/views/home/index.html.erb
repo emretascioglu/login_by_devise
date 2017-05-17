@@ -1,0 +1,5 @@
+<% if user_signed_in? %>
+	<h4><%= current_user.email %> hoş geldin. <<%= link_to "Çıkış", destroy_user_session_path, method: :delete%></h4>
+<% else %>
+	Herhangi bir kullanıcı giriş yapmadı. <%= link_to "Giriş", new_user_session_path %>
+<% end %>
